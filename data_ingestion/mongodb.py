@@ -8,3 +8,11 @@ class MongoDBClient:
     def fetch_all_data(self):
         return list(self.collection.find({}))  # Fetch all documents
 
+
+
+# usag exmaple 
+mongo_client = MongoDBClient("mongodb://localhost:27017", "my_database", "my_collection")
+data = mongo_client.fetch_all_data()
+print(data)  # Output the retrieved documents
+
+
